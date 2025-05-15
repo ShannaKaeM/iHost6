@@ -2,6 +2,8 @@
 
 A custom WordPress theme for iHost6, developed by MI Agency.
 
+**Version: 1.0.0 - Fresh Installation**
+
 ## Description
 
 MIIHost is a clean, modern WordPress theme designed specifically for iHost6. It provides a solid foundation for building a custom website with WordPress.
