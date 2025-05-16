@@ -1,0 +1,9 @@
+{
+    "name": "mi-agency/miihost",
+    "description": "Custom WordPress theme miihost",
+    "type": "wordpress-theme",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "htmlburger/carbon-fields": "^3.6"
+    }
+}

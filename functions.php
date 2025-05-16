@@ -1,4 +1,22 @@
 <?php
+
+// Include the property import script
+require_once get_stylesheet_directory() . '/inc/import-properties.php';
+
+// Include the script to publish draft properties
+require_once get_stylesheet_directory() . '/inc/publish-draft-properties.php';
+// Load Composer's autoloader
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
+
+// Initialize Carbon Fields
+// We'll hook this to 'after_setup_theme' to ensure WordPress is ready
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+    \Carbon_Fields\Carbon_Fields::boot();
+}
+
 /**
  * MIIHost functions and definitions
  *
@@ -135,6 +153,16 @@ function miihost_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'miihost_scripts' );
+
+/**
+ * Load Custom Post Type definitions.
+ */
+require get_template_directory() . '/inc/post-types.php';
+
+/**
+ * Load Carbon Fields options.
+ */
+require get_template_directory() . '/inc/carbon-fields-options.php';
 
 /**
  * Custom template tags for this theme.
