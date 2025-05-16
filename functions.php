@@ -1,7 +1,10 @@
 <?php
 
 // Include the property import script
-require_once get_stylesheet_directory() . '/inc/import-properties.php';
+require_once get_template_directory() . '/inc/import-properties.php';
+require_once get_template_directory() . '/inc/import-businesses.php';
+require_once get_template_directory() . '/inc/import-articles.php';
+require_once get_template_directory() . '/inc/import-profiles.php';
 
 // Include the script to publish draft properties
 require_once get_stylesheet_directory() . '/inc/publish-draft-properties.php';
